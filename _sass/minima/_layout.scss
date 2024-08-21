@@ -135,8 +135,8 @@
 }
 
 .footer-col-1 {
-  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-  width:         calc(35% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+  width:         calc(100% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
@@ -253,3 +253,72 @@
     }
   }
 }
+
+section {
+  width: 100%;
+  height: 450px;
+  background: #ccc;
+  margin: 0;
+  padding: 0;
+}
+
+// .slide-show-container {
+//   height: 100%;
+//   width: 100%;
+//   position: relative;
+// }
+// /* CSS Styles in common for all slides */
+// .wrapper-one,
+// .wrapper-two,
+// .wrapper-three {
+//   background-color: #eee;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   height: 100%;
+//   width: 100%;
+//   position: absolute;
+// }
+
+// /* CSS Styles for each slide */
+// /* Just add the image as background attribute and add some animation */
+
+// .wrapper-one {
+//   background-image: url("/_includes/exbinchero1.jpeg");
+// }
+
+// .wrapper-two {
+//   background-image: url("/_includes/exbinchero2.jpeg");
+//   animation: slideTwoAnim 20s infinite;
+// }
+
+// .wrapper-three {
+//   background-image: url("/_includes/exbinchero1.jpeg");
+//   animation: slideThreeAnim 20s infinite;
+// }
+
+// /* Styles for the text */
+// .wrapper-text {
+//   font: 700 40px/1.4 Roboto;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   margin-top: 150px;
+// }
+
+// /* Animations */
+// @keyframes slideTwoAnim {
+//     0%{opacity:0;}
+//     17%{opacity:0;}
+//     33%{opacity:1;}
+//     50%{opacity:1;}
+//     67%{opacity:0;}
+//     100%{opacity:0;}
+// }
+
+// @keyframes slideThreeAnim {
+//     0%{opacity:0;}
+//     50%{opacity:0;}
+//     67%{opacity:1;}
+//     83%{opacity:1;}
+//     100%{opacity:0;}
+// }
