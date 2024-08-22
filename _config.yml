@@ -30,6 +30,12 @@ theme: minima
 plugins:
   - jekyll-feed
 
+header_pages:
+  - education-exchange-cn.html
+  - education-consulting-cn.html
+  - about-cn.markdown
+  - contact-cn.markdown
+
 # carousels:
 #   - images: 
 #     - image: /_includes/exbinchero1.jpeg
