@@ -29,12 +29,13 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 header_pages:
-  - education-exchange-cn.html
   - education-consulting-cn.html
+  - education-exchange-cn.html
   - about-cn.markdown
-  - contact-cn.markdown
+  # - contact-cn.markdown
 
 # carousels:
 #   - images: 

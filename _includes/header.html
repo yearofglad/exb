@@ -1,4 +1,4 @@
-<header class="site-header" role="banner">
+<header class="site-header" role="banner" >
 
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
@@ -16,8 +16,8 @@
           </span>
         </label>
 
-        <div class="trigger">
-           <a href="{{ "/" | relative_url }}">首页</a> <!-- home -->
+        <div class="trigger" >
+           <a href="{{ "/" | relative_url }}" class="home-nav">首页</a> <!-- home -->
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title -%}
