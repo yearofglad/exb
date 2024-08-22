@@ -80,6 +80,7 @@ body.scrolled .site-header {
     font-family: "Noto Sans SC", sans-serif;
     font-size: 170%;
     font-weight: 500;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease, border-bottom-width 0.3s ease;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
@@ -91,6 +92,31 @@ body.scrolled .site-header {
     color: $brand-color;
     text-decoration: none; 
   }
+
+  .current-page {
+    color: $brand-color;
+    border-bottom: 3px solid currentColor;
+  }
+
+  // .cn-contact {
+  //   display: inline-block;
+  //   padding: 10px 20px;
+  //   margin-left: 100px;
+  //   margin:auto;
+  //   // background-color: $brand-color;
+  //   background-color: #000000;
+  //   color: #fff;
+  //   font-size: 170%;
+  //   font-weight: 500;
+  //   text-align: center;
+  //   text-decoration: none;
+  //   border-radius: 2px;
+  //   transition: background-color 0.3s ease;
+
+  //   &:hover {
+  //     background-color: $brand-color;
+  //   }
+  // }
 
   @include media-query($on-palm) {
     position: absolute;
@@ -152,6 +178,7 @@ body.scrolled .site-header {
  * Site footer
  */
 .site-footer {
+  font-family: "Noto Sans SC", sans-serif;
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
 }

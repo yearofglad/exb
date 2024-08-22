@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: 波士顿教育交流中心
-email: info@exb-inc.com
+email: info[at]exb-inc.com
 description: >- # this means to ignore newlines until "baseurl:"
   波士顿教育交流中心，英文Education Exchange of Boston，Inc，简称EXB，地处名校云集的全美第一大教育资源地 -- 波士顿 。公司成立于2011年，是在美国麻州政府正式注册的教育咨询服务机构。EXB由一支富有敬业精神资深的美国和美籍华人专业人士组成，包括富有经验的教育专家和美国学校前招生官，主要服务于来自美国，加拿大和中国等地的学生和家长，具体业务范围包括专业的本科申请，私立初高中申请，留学服务，短期游学和专业培训等优质的教育服务。诚信敬业创新共赢和服务是我们的核心价值观。
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -35,7 +35,7 @@ header_pages:
   - education-consulting-cn.html
   - education-exchange-cn.html
   - about-cn.markdown
-  # - contact-cn.markdown
+  - contact-cn.markdown
 
 # carousels:
 #   - images: 
