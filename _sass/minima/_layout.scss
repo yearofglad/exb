@@ -9,7 +9,7 @@
   z-index: 1000;
   border-bottom: 0px solid $grey-color-light;
   min-height: $spacing-unit * 3;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.2); 
   margin-bottom:0; 
 
 
@@ -32,6 +32,7 @@ body.scrolled .site-header {
 .site-title {
 	content: url("/assets/logoexb1.png");
 	float:left;
+  height:auto; 
 	position: relative;
 	width: 400px;
 	top: 100;
@@ -40,8 +41,12 @@ body.scrolled .site-header {
   // padding-left: -100px;
 }
 
-
-
+@media (max-width: 768px) {
+  .site-title {
+      content: url('/assets/globe.png'); 
+      width: 100px; 
+  }
+}
 
 
 .site-nav {
@@ -117,6 +122,7 @@ body.scrolled .site-header {
       }
       &{margin-left: 20px};
     }
+    
   }
 }
 
