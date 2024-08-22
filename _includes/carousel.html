@@ -3,27 +3,26 @@
 
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
-      <div class="numbertext">早</div>
+      <div class="text">早</div>
       <img src="/assets/exbinchero1.jpg" style="width:100%">
     </div>
   
     <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
+      <div class="text">2 / 3</div>
       <img src="/assets/exbinchero2.jpg" style="width:100%">
     </div>
   
     <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
+      <div class="text">3 / 3</div>
       <img src="/assets/exbinchero3.jpg" style="width:100%">
     </div>
   
     <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
   </div>
   <br>
   
-  <!-- The dots/circles -->
   <div style="text-align:center">
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
@@ -48,7 +47,7 @@
     display: block;
   }
 
-  .prev, .next {
+  /* .prev, .next {
     position: absolute;
     top: 50%;
     width: auto;
@@ -65,7 +64,7 @@
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
+  } */
 
   /* .text {
     color: #ffffff
@@ -78,13 +77,13 @@
   } */
 
   /* Add a background color to the number text */
-  .numbertext {
+  .text {
     color: #ffffff;
-    font-size: 250px;
-    padding: 12px 12px;
+    font-size: 20vw;
+    padding: 0px 0px;
     position: absolute;
     bottom:1;
-    top: 1;
+    top: 0;
     width:100%;
     text-align: center;
     vertical-align: middle;
@@ -93,20 +92,20 @@
   /* Style the dots/circles at the bottom */
   .dot {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
+    height: 1vw;
+    width: 1vw;
+    margin: 0 0vw;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease;
+    transition: background-color 0.2s ease;
   }
 
   .dot.active, .dot:hover {
     background-color: #717171;
   }
 
-  /* Add fade-in effect to the slides */
+  /* fade */
   .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
