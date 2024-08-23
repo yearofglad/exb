@@ -19,27 +19,27 @@
         <div class="trigger" >
             <a href="{{ "/" | relative_url }}" class="home-nav {% if page.url == "/" %}current-page{% endif %}">首页</a> <!-- home -->
             <li class="dropdown">
-              <a href="#" class="dropbtn">教育咨询 <i class="arrow down"></i></a>
+              <a href="#" class="dropbtn {% if page.url == "/private-high-school-application-cn/" or page.url == "/college-application-cn/" or page.url == "/study-in-us-services-cn/" or page.url == "/premium-transfer-cn/" %}current-dropbtn{% endif %}">教育咨询 <i class="arrow down"></i></a>
               <div class="dropdown-content">
-                  <a href="/page1-sub1">私立高中申请</a>
-                  <a href="/page1-sub2">大学申请</a>
-                  <a href="/page1-sub3">留学服务</a>
-                  <a href="/page1-sub3">名校转学</a>
+                <a href="/private-high-school-application-cn/" class="{% if page.url == "/private-high-school-application-cn/" %}current-dropdown{% endif %}">私立高中申请</a>
+                <a href="/college-application-cn/" class="{% if page.url == "/college-application-cn/" %}current-dropdown{% endif %}">大学申请</a>
+                <a href="/study-in-us-services-cn/" class="{% if page.url == "/study-in-us-services-cn/" %}current-dropdown{% endif %}">留学服务</a>
+                <a href="/premium-transfer-cn/" class="{% if page.url == "/premium-transfer-cn/" %}current-dropdown{% endif %}">名校转学</a>
               </div>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropbtn">教育交流 <i class="arrow down"></i></a>
+              <a href="#" class="dropbtn {% if page.url == "/professional-training-cn/" or page.url == "/study-tour-cn/" or page.url == "/partnership-cn/" %}current-dropbtn{% endif %}">教育交流 <i class="arrow down"></i></a>
               <div class="dropdown-content">
-                  <a href="/page1-sub1">专业培训</a>
-                  <a href="/page1-sub2">短期游学</a>
-                  <a href="/page1-sub3">合作项目</a>
+                <a href="/professional-training-cn/" class="{% if page.url == "/professional-training-cn/" %}current-dropdown{% endif %}">专业培训</a>
+                <a href="/study-tour-cn/" class="{% if page.url == "/study-tour-cn/" %}current-dropdown{% endif %}">短期游学</a>
+                <a href="/partnership-cn/" class="{% if page.url == "/partnership-cn/" %}current-dropdown{% endif %}">合作项目</a>
               </div>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropbtn">关于我们 <i class="arrow down"></i></a>
+              <a href="#" class="dropbtn {% if page.url == "/company-cn/" or page.url == "/exb-team-cn" %}current-dropbtn{% endif %}">关于我们 <i class="arrow down"></i></a>
               <div class="dropdown-content">
-                  <a href="/page1-sub1">公司简介</a>
-                  <a href="/page1-sub2">团队简介</a>
+                <a href="/company-cn/" class="{% if page.url == "/company-cn/" %}current-dropdown{% endif %}">公司简介</a>
+                <a href="/exb-team-cn/" class="{% if page.url == "/exb-team-cn/" %}current-dropdown{% endif %}">团队简介</a>
               </div>
             </li>
             {%- for path in page_paths -%}

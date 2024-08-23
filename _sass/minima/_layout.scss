@@ -59,7 +59,7 @@ body.scrolled .site-header {
 .site-nav {
   // display:flex;
   position: fixed; 
-  right: 2.5vw;
+  right: 3vw;
   top: 2vw;
   align-items: center; 
   display: inline-block;
@@ -83,11 +83,12 @@ body.scrolled .site-header {
     font-size: 170%;
     font-weight: 500;
     transition: color 0.3s ease, border-bottom-color 0.3s ease, border-bottom-width 0.3s ease;
+    margin-right: 30px;
 
-    // Gaps between nav items, but not on the last one
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
+    // // Gaps between nav items, but not on the last one
+    // &:not(:last-child) {
+    //   margin-right: 30px;
+    // }
   }
 
   .page-link:hover, .home-nav:hover {
@@ -107,13 +108,29 @@ body.scrolled .site-header {
     font-size: 170%;
     font-weight: 500;
     transition: color 0.3s ease, border-bottom-color 0.3s ease, border-bottom-width 0.3s ease;
+    margin-right: 2vw; 
+    margin-left: 1vw;
+    @media not all and (min-resolution:.001dpcm) { 
+      @supports (-webkit-appearance:none) {
+        margin-right: 1vw;
+      }
+    }
+    // padding-right: 1%;
+    // padding-left: 1%;
+    // border: 2px solid currentColor;
+    // border-radius: 1px;
+    // border-bottom: 4px solid currentColor;
+    
+
+    // @supports (-webkit-touch-callout: none) {
+    //   margin-right: -4vw;
+    // }
   }
 
   .language-switch:hover {
     color: #169c6d;
     text-decoration: none; 
   }
-
 
   /* Dropdown container */
   .dropdown {
@@ -131,29 +148,59 @@ body.scrolled .site-header {
     border: none;
     transition: color 0.3s ease, border-bottom-color 0.3s ease, border-bottom-width 0.3s ease;
     cursor: pointer;
+
+    &.current-dropbtn {
+      color: $brand-color;
+      border-bottom: 3px solid currentColor;
+    }
+  }
+
+  .dropbtn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3vw; /* Adjust this value to match the gap */
+    background: transparent;
   }
 
   /* Dropdown content (hidden by default) */
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: #ffffff;
+    border: 1.5px solid #b0b0b0;
+    border-radius: 2px;
+    min-width: 4vw;
+    margin-top: 3vw;
+    padding: 1vw;
+    // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
 
   /* Links inside the dropdown */
   .dropdown-content a {
-    color: black;
+    color: $text-color;
+    line-height: $base-line-height;
+    font-family: "Noto Sans SC", sans-serif;
+    font-size: 170%;
+    font-weight: 500;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    transition: background-color 0.3s ease; 
+
+    &.current-dropdown {
+      color: $brand-color;
+    }
   }
 
-  /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
     background-color: #f1f1f1;
+    // border: 1.5px solid #f1f1f1;
+    // border-radius: 3px;
   }
 
   /* Show the dropdown menu on hover */
@@ -166,6 +213,8 @@ body.scrolled .site-header {
     color: $brand-color;
     text-decoration: none; 
   }
+
+  
 
   // .cn-contact {
   //   display: inline-block;
