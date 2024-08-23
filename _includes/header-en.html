@@ -1,0 +1,81 @@
+<header class="site-header" role="banner" >
+
+    <div class="wrapper">
+      {%- assign default_paths = site.pages | map: "path" -%}
+      {%- assign page_paths = site.header_pages | default: default_paths -%}
+      <a class="site-title" rel="author" href="{{ "/" | relative_url }}"></a>
+  
+      {%- if page_paths -%}
+        <nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="30px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+  
+          <div class="trigger" >
+              <a href="{{ "/en/" | relative_url }}" class="home-nav {% if page.url == "/en/" %}current-page{% endif %}">Home</a> <!-- home -->
+              <li class="dropdown">
+                <a href="#" class="dropbtn {% if page.url == "/private-high-school-application-cn/" or page.url == "/college-application-cn/" or page.url == "/study-in-us-services-cn/" or page.url == "/premium-transfer-cn/" %}current-dropbtn{% endif %}">Education Consulting <i class="arrow down"></i></a>
+                <div class="dropdown-content">
+                  <a href="/private-high-school-application-cn/" class="{% if page.url == "/private-high-school-application-cn/" %}current-dropdown{% endif %}">私立高中申请</a>
+                  <a href="/college-application-cn/" class="{% if page.url == "/college-application-cn/" %}current-dropdown{% endif %}">大学申请</a>
+                  <a href="/study-in-us-services-cn/" class="{% if page.url == "/study-in-us-services-cn/" %}current-dropdown{% endif %}">留学服务</a>
+                  <a href="/premium-transfer-cn/" class="{% if page.url == "/premium-transfer-cn/" %}current-dropdown{% endif %}">名校转学</a>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropbtn {% if page.url == "/professional-training-cn/" or page.url == "/study-tour-cn/" or page.url == "/partnership-cn/" %}current-dropbtn{% endif %}">Exchange <i class="arrow down"></i></a>
+                <div class="dropdown-content">
+                  <a href="/professional-training-cn/" class="{% if page.url == "/professional-training-cn/" %}current-dropdown{% endif %}">专业培训</a>
+                  <a href="/study-tour-cn/" class="{% if page.url == "/study-tour-cn/" %}current-dropdown{% endif %}">短期游学</a>
+                  <a href="/partnership-cn/" class="{% if page.url == "/partnership-cn/" %}current-dropdown{% endif %}">合作项目</a>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropbtn {% if page.url == "/company-cn/" or page.url == "/exb-team-cn" %}current-dropbtn{% endif %}">About Us <i class="arrow down"></i></a>
+                <div class="dropdown-content">
+                  <a href="/company-cn/" class="{% if page.url == "/company-cn/" %}current-dropdown{% endif %}">公司简介</a>
+                  <a href="/exb-team-cn/" class="{% if page.url == "/exb-team-cn/" %}current-dropdown{% endif %}">团队简介</a>
+                </div>
+              </li>
+              <a href="{{ "/" | relative_url }}" class="home-nav {% if page.url == "/" %}current-page{% endif %}">Contact Us</a> <!-- home -->
+            <a href="/" class="language-switch">中文</a>
+            <!-- <a href="/contact-cn" class="cn-contact">联系我们</a> -->
+          </div>
+        </nav>
+      {%- endif -%}
+    </div>
+  
+  
+  
+  </header>
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var dropdownButtons = document.querySelectorAll(".dropbtn");
+  
+      dropdownButtons.forEach(function(button) {
+          button.addEventListener("click", function(event) {
+              event.preventDefault(); 
+              var dropdownContent = this.nextElementSibling;
+              dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+          });
+      });
+      window.addEventListener("click", function(event) {
+          dropdownButtons.forEach(function(button) {
+              var dropdownContent = button.nextElementSibling;
+              if (!button.contains(event.target) && !dropdownContent.contains(event.target)) {
+                  dropdownContent.style.display = "none";
+              }
+          });
+      });
+  });
+  
+  
+  </script>
+  

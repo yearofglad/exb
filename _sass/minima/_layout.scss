@@ -239,11 +239,11 @@ body.scrolled .site-header {
   @media (max-width: 900px) {
   // @include media-query($on-palm) {
     position: absolute;
-    top: 9px;
-    right: calc($spacing-unit / 2);
+    top: 3vw;
+    right: 60px;
     background-color: $background-color;
-    border: 1px solid $grey-color-light;
-    border-radius: 5px;
+    // border: 1px solid $grey-color-light;
+    // border-radius: 5px;
     text-align: right;
 
     label[for="nav-trigger"] {
@@ -265,7 +265,7 @@ body.scrolled .site-header {
       text-align: center;
 
       > svg {
-        fill: $grey-color-dark;
+        fill: black;
       }
     }
 
@@ -298,7 +298,7 @@ body.scrolled .site-header {
  */
 .site-footer {
   font-family: "Noto Sans SC", sans-serif;
-  border-top: 1px solid $grey-color-light;
+  // border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
 }
 

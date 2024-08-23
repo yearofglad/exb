@@ -1,29 +1,30 @@
 ---
 layout: default
-carousels:
-  - images: 
-    - image: /assets/exbinchero1.jpg
-    - image: /assets/exbinchero2.jpg
-    - image: /assets/exbinchero1.jpg
-    - image: /assets/exbinchero2.jpg
-  - images:
-    - image: /assets/exbinchero1.jpg
-    - image: /assets/exbinchero2.jpg
-    - image: /assets/exbinchero1.jpg
-    - image: /assets/exbinchero2.jpg
 ---
 
-<!-- <div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-</div> -->
-
 <div class="body">
-  {% include carousel.html %}
-
-  
+  <div class="mobile" style="display: none;">
+    {% include carousel-mobile.html %}
+  </div>
+  <div class="desktop" style="display: none;">
+    {% include carousel.html %}
+  </div>
 </div>
 
 {{ content }}
+
+<script>
+  // Function to detect if the user is on a mobile device
+  function isMobile() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+  }
+
+  // Conditionally show mobile or desktop content
+  if (isMobile()) {
+    document.querySelector('.mobile').style.display = 'block';
+  } else {
+    document.querySelector('.desktop').style.display = 'block';
+  }
+</script>
+
 
