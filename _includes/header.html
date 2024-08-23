@@ -18,12 +18,37 @@
 
         <div class="trigger" >
             <a href="{{ "/" | relative_url }}" class="home-nav {% if page.url == "/" %}current-page{% endif %}">首页</a> <!-- home -->
+            <li class="dropdown">
+              <a href="#" class="dropbtn">教育咨询 <i class="arrow down"></i></a>
+              <div class="dropdown-content">
+                  <a href="/page1-sub1">私立高中申请</a>
+                  <a href="/page1-sub2">大学申请</a>
+                  <a href="/page1-sub3">留学服务</a>
+                  <a href="/page1-sub3">名校转学</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">教育交流 <i class="arrow down"></i></a>
+              <div class="dropdown-content">
+                  <a href="/page1-sub1">专业培训</a>
+                  <a href="/page1-sub2">短期游学</a>
+                  <a href="/page1-sub3">合作项目</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">关于我们 <i class="arrow down"></i></a>
+              <div class="dropdown-content">
+                  <a href="/page1-sub1">公司简介</a>
+                  <a href="/page1-sub2">团队简介</a>
+              </div>
+            </li>
             {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title -%}
             <a class="page-link {% if page.url == my_page.url %}current-page{% endif %}" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
+          <a href="#" class="language-switch">EN</a>
           <!-- <a href="/contact-cn" class="cn-contact">联系我们</a> -->
         </div>
       </nav>
@@ -35,4 +60,26 @@
 </header>
 
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var dropdownButtons = document.querySelectorAll(".dropbtn");
 
+    dropdownButtons.forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            event.preventDefault(); 
+            var dropdownContent = this.nextElementSibling;
+            dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+        });
+    });
+    window.addEventListener("click", function(event) {
+        dropdownButtons.forEach(function(button) {
+            var dropdownContent = button.nextElementSibling;
+            if (!button.contains(event.target) && !dropdownContent.contains(event.target)) {
+                dropdownContent.style.display = "none";
+            }
+        });
+    });
+});
+
+
+</script>

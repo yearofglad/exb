@@ -20,11 +20,6 @@
       <img src="/assets/exbinchero3.jpg" style="width:100%">
     </div>
 
-    <a class="dot-container">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-    </a>
   
   </div>
   <br>
@@ -41,6 +36,7 @@
     margin-right: -50vw;    
     position: relative;
     overflow: hidden;
+    background-color: white; 
   }
 
   .slideshow-container img {
@@ -48,6 +44,13 @@
     height: auto;
     display: block;
   }
+
+  .slideshow-container.transition-background {
+    background-image: url('/assets/smoothtransitionhelper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: transparent; /* Remove white background during transition */
+}
 
   .brsmall { 
     display: block; 
@@ -90,11 +93,11 @@
   /* Style the dots/circles at the bottom */
   .dot {
     cursor: pointer;
-    height: 1vw;
-    width: 1vw;
+    /* height: 1vw;
+    width: 1vw; */
     margin-top: -1vw;
     background-color: #bbb;
-    border-radius: 50%;
+    border-radius: 0%;
     display: inline-block;
     transition: background-color 0.2s ease;
   }
@@ -103,51 +106,58 @@
     background-color: #717171;
   }
 
-  /* fade */
-  .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+  .mySlides {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1.5s;
   }
 
-  @-webkit-keyframes fade {
-    from {opacity: .2} 
-    to {opacity: 1}
-  }
-
-  @keyframes fade {
-    from {opacity: .2} 
-    to {opacity: 1}
-  }
+  .mySlides img {
+  width: 100%;
+}
+ 
+  .mySlides.active {
+  opacity: 1;
+  position: relative;
+ }
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
 </style>
 
-
 <script>
-  var slideIndex = 1;
-  showSlides(slideIndex);
+ let slideIndex = 0;
+const slides = document.getElementsByClassName("mySlides");
+const slideshowContainer = document.querySelector(".slideshow-container");
 
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+
+    // Increment slideIndex
+    slideIndex++;
+
+    // If it reaches the last slide, prepare for transition back to the first slide
+    if (slideIndex >= slides.length) {
+        slideIndex = 0; // Reset slideIndex to the first slide
+        // Add class to change background image during transition
+        slideshowContainer.classList.add("transition-background");
+        setTimeout(() => {
+            slideshowContainer.classList.remove("transition-background");
+        }, 1500); // Duration of the transition
     }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-  }
-</script>
+
+    // Show the current slide
+    slides[slideIndex].classList.add("active");
+
+    // Set a timeout to show the next slide
+    setTimeout(showSlides, 8000); // Change image every 8 seconds
+}
+
+// Initialize the first slide
+slides[slideIndex].classList.add("active");
+setTimeout(showSlides, 8000); // Start the slideshow
+  </script>

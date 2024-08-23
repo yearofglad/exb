@@ -32,9 +32,9 @@ plugins:
   - jekyll-seo-tag
 
 header_pages:
-  - education-consulting-cn.html
-  - education-exchange-cn.html
-  - about-cn.markdown
+  # - education-consulting-cn.html
+  # - education-exchange-cn.html
+  # - about-cn.markdown
   - contact-cn.markdown
 
 # carousels:
