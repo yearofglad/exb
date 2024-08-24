@@ -76,6 +76,11 @@ body.scrolled .site-header {
     display: none;
   }
 
+  .brsmall { 
+    display: block; 
+    margin-bottom: -.35em; 
+  } 
+
   .page-link, .home-nav {
     color: $text-color;
     line-height: $base-line-height;

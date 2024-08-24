@@ -15,13 +15,13 @@
             </svg>
           </span>
         </label>
-
+        
         <div class="trigger" >
             <a href="{{ "/" | relative_url }}" class="home-nav {% if page.url == "/" %}current-page{% endif %}">首页</a> <!-- home -->
             <li class="dropdown">
-              <a href="#" class="dropbtn {% if page.url == "/private-high-school-application-cn/" or page.url == "/college-application-cn/" or page.url == "/study-in-us-services-cn/" or page.url == "/premium-transfer-cn/" %}current-dropbtn{% endif %}">教育咨询 <i class="arrow down"></i></a>
+              <a href="#" class="dropbtn {% if page.url == "/private-school-application-cn/" or page.url == "/college-application-cn/" or page.url == "/study-in-us-services-cn/" or page.url == "/premium-transfer-cn/" %}current-dropbtn{% endif %}">教育咨询 <i class="arrow down"></i></a>
               <div class="dropdown-content">
-                <a href="/private-high-school-application-cn/" class="{% if page.url == "/private-high-school-application-cn/" %}current-dropdown{% endif %}">私立高中申请</a>
+                <a href="/private-school-application-cn/" class="{% if page.url == "/private-school-application-cn/" %}current-dropdown{% endif %}">私立学校申请</a>
                 <a href="/college-application-cn/" class="{% if page.url == "/college-application-cn/" %}current-dropdown{% endif %}">大学申请</a>
                 <a href="/study-in-us-services-cn/" class="{% if page.url == "/study-in-us-services-cn/" %}current-dropdown{% endif %}">留学服务</a>
                 <a href="/premium-transfer-cn/" class="{% if page.url == "/premium-transfer-cn/" %}current-dropdown{% endif %}">名校转学</a>

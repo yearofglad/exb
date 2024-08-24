@@ -1,0 +1,302 @@
+<div class="submission-form">
+    <div class="image-container">
+        <img src="/assets/globe.png" class="globe-image">
+    </div>
+    <br>
+    <div class="h1"">表 / Form</div>
+    <div class="title">联系我们</div>
+    <div class="line"></div>
+    <div class="h2">感谢您的关注。如需联系我们，请填写下面的表格。<span class="brsmall"></span>我们期待着与您联系的机会。</div>
+    
+    <form 
+        name="contact" 
+        action="/form-success/"
+        data-netlify="true">
+        <p><label class="required">学生名字 / Student Name <input type="text" name="name" /></label></p>
+        <p><label class="required">申请的年级 / Grade Applying For <input type="text" name="grade" /></label></p>
+        <p><label class="required">电邮 / Email <input type="email" name="email" /></label></p>
+        <p><label>&nbsp;微信 / WeChat <input type="text" name="wechat" /></label></p>
+        <p><label>&nbsp;其他信息  / Additional Info <input type="tel" name="phone" /></label></p>
+        <br><br>
+        <div class="button-container">
+            <button type="submit" class="submit-button">提交 / Submit</button>
+        </div>    
+    </form>
+    
+    <div class="h2" style="margin-top: 65vw; font-size: 100%; position:fixed;">© 2024 Education Exchange of Boston, Inc. All Rights Reserved</div>
+
+</div>
+
+<style>
+
+    form {
+        max-width: 600px;
+        margin-top: 6vw;
+        /* padding: 20px; */
+        /* background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px; */
+    }
+
+    .required::before {
+        content: "*";
+        color: rgb(215, 6, 29);
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    .spacer {
+        height: 50px; 
+    }
+
+    label {
+        font-family: "Noto Sans SC", sans-serif;
+        font-size: 110%;
+        display: block;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        width: 100%;
+        font-family: "Noto Sans SC", sans-serif;
+        font-size: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus {
+        border-color: rgb(255, 255, 255);
+        /* border-width: 2px; */
+        box-shadow: 0 1px 5px rgba(0, 78, 195, 0.5);
+        outline: none;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        width: 100%; 
+    }
+
+    .submit-button {
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        color: rgb(0, 78, 195);
+        border: 1px solid rgb(0, 78, 195);
+        border-radius: 30px;
+        padding: 10px 20px;
+        font-size: 20px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    }
+
+    .submit-button:hover {
+        box-shadow: 0px 2px 1px 1px rgb(0, 78, 195, 0.1);
+        background-color: rgba(0, 78, 195, 0.089);
+    }
+
+    /* .submit-button:active {
+        box-shadow: 0px 3px 4px 4px rgb(0, 78, 195, 0.1);
+        color: #ffffff;
+        background-color: rgba(0, 78, 195, 1);
+    } */
+
+    .submission-form {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        height: 125vh;
+        max-width: 70%;
+        margin: 0 auto;
+        /* padding: 20px; */
+        background-color: #ffffff;
+        border: 1px solid #b0b0b0;
+        border-radius: 10px;
+        margin-bottom: 100px;
+    }
+
+    .title {
+        margin-top: 13vw;
+        font-family: "Noto Sans SC", sans-serif;
+        font-size: 250%;
+        font-weight: 600;
+
+    }
+
+    .brsmall { 
+    display: block; 
+    margin-bottom: -.3em; 
+    } 
+
+    .h1 {
+        font-family: "Noto Sans SC", sans-serif;
+        margin-top: 11.5vw;
+        position:absolute;
+        font-weight: 450;
+        font-size: 100%;
+        color: grey; 
+    }
+
+    .h2 {
+        font-family: "Noto Sans SC", sans-serif;
+        position:absolute;
+        margin-top: 18vw;
+        font-weight: 400;
+        font-size: 140%;
+        text-align: center;
+        color: rgb(0, 0, 0); 
+    }
+
+    .line {
+        content: '';
+        margin: 17vw;
+        position: absolute;
+        width: 60%;
+        height: 1px;
+        background-color: #a9a9a9;
+    }
+
+    .image-container {
+        margin: 2vw;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .globe-image {
+        width: auto;
+        height: 100px;
+    }
+
+    .image-container::before,
+    .image-container::after {
+        content: '';
+        position: absolute;
+        width: 13vw; /* Adjust as needed */
+        height: 1px;
+        background-color: #a9a9a9;
+    }
+
+    .image-container::before {
+        left: -200px; /* Adjust as needed */
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .image-container::after {
+        right: -200px; /* Adjust as needed */
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @media (max-width: 768px) {
+
+        .form {
+            max-width: 200px;
+            margin-top: 10vw;
+        }
+
+        .title {
+            font-size: 200%;
+            margin-top: 17vw;
+        }
+
+        .h1 {
+            font-size: 0%;
+            /* margin-top: 20vw; */
+        }
+
+        .h2 {
+            font-size: 100%;
+            margin-top: 25vw;
+        }
+
+        .submission-form {
+            max-width: 95%;
+        }
+
+        .image-container {
+            margin: 1vw;
+        }
+
+        .image-container::before,
+        .image-container::after {
+            width: 8vw; /* Adjust as needed */
+        }
+
+        .image-container::before {
+            left: -10vw; /* Adjust as needed */
+        }
+
+        .image-container::after {
+            right: -10vw; /* Adjust as needed */
+        }
+    }
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const inputs = document.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"]');
+
+        inputs.forEach(function(input) {
+            input.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault(); 
+                }
+            });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form[name="contact"]');
+        
+        form.addEventListener('submit', function(event) {
+            const name = form.querySelector('input[name="name"]');
+            const grade = form.querySelector('input[name="grade"]');
+            const email = form.querySelector('input[name="email"]');
+            const phone = form.querySelector('input[name="phone"]');
+            
+            let errorMessages = [];
+            
+            // Validate name
+            if (name.value.trim() === "") {
+                errorMessages.push("学生名字 / Student Name is required.");
+            }
+            
+            // Validate grade
+            if (grade.value.trim() === "") {
+                errorMessages.push("申请的年级 / Grade Applying For is required.");
+            }
+            
+            // Validate email
+            if (!email.value.match(/^[^@]+@[^@]+\.[a-zA-Z]{2,6}$/)) {
+                errorMessages.push("电邮 / Email is not valid.");
+            }
+            
+            // // Validate phone (if required)
+            // if (phone.value && !phone.value.match(/^[0-9]{10}$/)) {
+            //     errorMessages.push("Phone number must be 10 digits.");
+            // }
+            
+            if (errorMessages.length > 0) {
+                alert(errorMessages.join("\n")); // Show all errors in one prompt
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    });
+</script>

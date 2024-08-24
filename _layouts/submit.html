@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  <body>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+  </body>
+
+</html>
+
+<style>
+  body {
+    background-image: url('/assets/backgroundform.jpg'); /* Replace with the actual path to your image */
+    background-size: cover; /* Ensure the background image covers the entire page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Ensure the background image stays fixed during scrolling */
+  }
+  </style>
