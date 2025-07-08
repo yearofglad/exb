@@ -1,12 +1,67 @@
 <header class="site-header" role="banner" >
 
   <div class="wrapper">
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}"></a>
+    <nav class="navbar navbar-expand-lg bg-transparent">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="#">
+          <img src="/assets/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        </a> -->
+        <a class="site-title" rel="author" href="{{ "/" | relative_url }}"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav h3 ps-4">
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="#">主页</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                首页
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">私立学校申请</a></li>
+                <li><a class="dropdown-item" href="#">大学申请</a></li>
+                <li><a class="dropdown-item" href="#">留学服务</a></li>
+                <li><a class="dropdown-item" href="#">名校转学</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                教育交流
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">专业培训</a></li>
+                <li><a class="dropdown-item" href="#">短期游学</a></li>
+                <li><a class="dropdown-item" href="#">合作项目</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                关于我们
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">公司简介</a></li>
+                <li><a class="dropdown-item" href="#">团队简介</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">联系我们</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">EN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%} -->
+    <!-- <a class="site-title" rel="author" href="{{ "/" | relative_url }}"></a> -->
 
-    {%- if page_paths -%}
-      <nav class="site-nav">
+    <!-- {%- if page_paths -%} -->
+      
+      <!-- <nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -17,7 +72,7 @@
         </label>
         
         <div class="trigger" >
-            <a href="{{ "/" | relative_url }}" class="home-nav {% if page.url == "/" %}current-page{% endif %}">首页</a> <!-- home -->
+            <a href="{{ "/" | relative_url }}" class="home-nav {% if page.url == "/" %}current-page{% endif %}">首页</a> 
             <li class="dropdown">
               <a href="#" class="dropbtn {% if page.url == "/private-school-application-cn/" or page.url == "/college-application-cn/" or page.url == "/study-in-us-services-cn/" or page.url == "/premium-transfer-cn/" %}current-dropbtn{% endif %}">教育咨询 <i class="arrow down"></i></a>
               <div class="dropdown-content">
@@ -49,10 +104,9 @@
             {%- endif -%}
           {%- endfor -%}
           <a href="/en/" class="language-switch">EN</a>
-          <!-- <a href="/contact-cn" class="cn-contact">联系我们</a> -->
         </div>
-      </nav>
-    {%- endif -%}
+      </nav> -->
+    <!-- {%- endif -%} -->
   </div>
 
 
@@ -61,25 +115,25 @@
 
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var dropdownButtons = document.querySelectorAll(".dropbtn");
+//   document.addEventListener("DOMContentLoaded", function() {
+//     var dropdownButtons = document.querySelectorAll(".dropbtn");
 
-    dropdownButtons.forEach(function(button) {
-        button.addEventListener("click", function(event) {
-            event.preventDefault(); 
-            var dropdownContent = this.nextElementSibling;
-            dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
-        });
-    });
-    window.addEventListener("click", function(event) {
-        dropdownButtons.forEach(function(button) {
-            var dropdownContent = button.nextElementSibling;
-            if (!button.contains(event.target) && !dropdownContent.contains(event.target)) {
-                dropdownContent.style.display = "none";
-            }
-        });
-    });
-});
+//     dropdownButtons.forEach(function(button) {
+//         button.addEventListener("click", function(event) {
+//             event.preventDefault(); 
+//             var dropdownContent = this.nextElementSibling;
+//             dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+//         });
+//     });
+//     window.addEventListener("click", function(event) {
+//         dropdownButtons.forEach(function(button) {
+//             var dropdownContent = button.nextElementSibling;
+//             if (!button.contains(event.target) && !dropdownContent.contains(event.target)) {
+//                 dropdownContent.style.display = "none";
+//             }
+//         });
+//     });
+// });
 
 
 </script>

@@ -273,3 +273,34 @@ table {
     border: 1px solid $grey-color-light;
   }
 }
+
+.dropdown {
+    margin-right: 0.5em;
+
+}
+
+.nav-item {
+    margin-right: 0.5em;
+}
+
+.dropdown-toggle::after {
+    content: "⌄"; 
+    font-weight: bold;
+    border: none;
+    font-size: 0.8em;
+    // margin-left: 0.5em;
+}
+
+.dropdown-item {
+    font-size: 1.5rem; /* h3 equivalent */
+    font-weight: 500;    /* h3 equivalent */
+    line-height: 1.2;     
+}
+
+// .main-text {
+//     position: absolute;
+//     top: 50px;
+//     width: 96.66666666666666%;
+//     color: #FFF;
+// }
+

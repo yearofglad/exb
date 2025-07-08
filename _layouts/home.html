@@ -2,29 +2,32 @@
 layout: default
 ---
 
-<div class="body">
-  <div class="mobile" style="display: none;">
-    {% include carousel-mobile.html %}
-  </div>
-  <div class="desktop" style="display: none;">
-    {% include carousel.html %}
-  </div>
 </div>
+</main>
 
+
+{% include car.html %}
 {{ content }}
 
-<script>
-  // Function to detect if the user is on a mobile device
-  function isMobile() {
-    return /Mobi|Android/i.test(navigator.userAgent);
-  }
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
 
-  // Conditionally show mobile or desktop content
-  if (isMobile()) {
-    document.querySelector('.mobile').style.display = 'block';
-  } else {
-    document.querySelector('.desktop').style.display = 'block';
-  }
+  </div>
+</main>
+
+<script>
+  // // Function to detect if the user is on a mobile device
+  // function isMobile() {
+  //   return /Mobi|Android/i.test(navigator.userAgent);
+  // }
+
+  // // Conditionally show mobile or desktop content
+  // if (isMobile()) {
+  //   document.querySelector('.mobile').style.display = 'block';
+  // } else {
+  //   document.querySelector('.desktop').style.display = 'block';
+  // }
 </script>
+
 
 
